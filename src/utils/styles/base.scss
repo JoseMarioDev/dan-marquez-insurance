@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+// colors
+$color-base: #1771c5;
+$color-accent-light: #45c1ef;
+$color-accent-dark: #136fa5;
+$color-light: #f0ecea;
+$color-dark: #201d21;
+
+//fonts
+$font-accent: 'Lora', serif;
+$font-primary: 'Source Sans Pro', sans-serif;
+
+// media queries
+
+@mixin mobile {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet-portrait {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin ultrawide {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+// example of how to use
+// .header-title {
+//    font-size: 2rem;
+
+//    @include mobile {
+//       font-size: 1rem;
+//    }
+// }

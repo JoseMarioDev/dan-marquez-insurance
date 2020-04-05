@@ -105,9 +105,48 @@ nav,
 section {
   display: block;
 }
+
+html {
+  font-size: 62.5%;
+}
 body {
   line-height: 1;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  background: $color-light;
+  color: $color-dark;
+  font-family: $font-primary;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-accent;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.6rem;
+}
+h5 {
+  font-size: 1.3rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
 ol,
 ul {
   list-style: none;

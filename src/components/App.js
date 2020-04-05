@@ -4,7 +4,8 @@ import '../utils/styles/main.scss';
 
 const App = () => (
   <div>
-    <h1>My React App</h1>
+    <h3>this is an H3 heading</h3>
+    <p>this is a paragraph</p>
   </div>
 );
 

@@ -1,0 +1,11 @@
+.navContainer {
+  outline: 1px solid blue;
+  display: flex;
+  height: 10rem;
+  justify-content: space-between;
+
+  .navLogo {
+    width: 100%;
+    object-fit: contain;
+  }
+}

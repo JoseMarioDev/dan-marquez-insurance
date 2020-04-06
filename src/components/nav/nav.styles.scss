@@ -1,11 +1,66 @@
 .navContainer {
-  outline: 1px solid blue;
+  .innerContainer {
+    width: 33%;
+    display: flex;
+  }
+  // outline: 1px solid blue;
   display: flex;
+  width: 100%;
   height: 10rem;
-  justify-content: space-between;
-
-  .navLogo {
+  .navLinks {
+    // outline: 1px solid red;
     width: 100%;
-    object-fit: contain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      color: $color-base;
+      text-transform: uppercase;
+      display: inline-block;
+      padding-bottom: 1rem;
+      position: relative;
+      &:hover {
+        color: $color-accent-dark;
+      }
+
+      &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: $color-accent-dark;
+        transition: width 0.5s ease 0s, left 0.5s ease 0s;
+        width: 0;
+      }
+      &:hover:after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    // outline: 1px solid orange;
+    .socialLinks {
+      // outline: 1px solid green;
+      margin-bottom: 1rem;
+      width: 30%;
+      display: flex;
+      .icon {
+        // outline: 1px solid red;
+        margin-right: 2rem;
+        width: 100%;
+        height: 100%;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }

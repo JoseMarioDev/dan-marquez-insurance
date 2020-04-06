@@ -4,21 +4,39 @@
 
 import React from 'react';
 import Logo from '../../assets/img/logo1.svg';
+import { navLinks, socialIcons } from '../../data';
 
 const Nav = () => (
   <div className="navContainer">
     {/* left side logo */}
-    <a href="/home">
-      <img src={Logo} alt="logo" className="navLogo" />
-    </a>
-    {/* middle section nav links */}
-    <ul className="navLinks">
-      <a href="/about" className="navLink">
-        About
+    <div className="innerContainer">
+      <a href="/home">
+        <img src={Logo} alt="logo" className="navLogo" />
       </a>
-    </ul>
+    </div>
+
+    {/* middle section nav links */}
+    <div className="innerContainer">
+      <ul className="navLinks">
+        {navLinks.map(link => (
+          <a href={`/${link.pageLink}`} className="link">
+            {link.name}
+          </a>
+        ))}
+      </ul>
+    </div>
+
     {/* right side, socials and phone */}
-    <div className="socials">socials here</div>
+    <div className="innerContainer contactContainer">
+      <div className="socialLinks">
+        {socialIcons.map(icon => (
+          <a href={`/${icon.link}`} className="icon">
+            <img src={icon.icon} alt="social icon" />
+          </a>
+        ))}
+      </div>
+      <div className="phone">(555) 555 5555</div>
+    </div>
   </div>
 );
 
